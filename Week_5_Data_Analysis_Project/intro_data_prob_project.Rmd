@@ -1,0 +1,123 @@
+---
+title: "Exploring the BRFSS data"
+output: 
+  html_document: 
+    fig_height: 4
+    highlight: pygments
+    theme: spacelab
+---
+
+## Setup
+
+### Load packages
+
+```{r load-packages, message = FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
+### Load data
+
+Make sure your data and R Markdown files are in the same directory. When loaded
+your data file will be called `brfss2013`. Delete this note when before you submit 
+your work. 
+
+```{r load-data}
+load("brfss2013.RData")
+```
+
+
+
+* * *
+
+## Part 1: Data
+
+The Behavioral Risk Factor Surveillance System (BRFSS) is the nation’s premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. 
+
+Data is collected from all 50 states as well as the District of Columbia, Guam, Puerto Rico, and the U.S. Virgin Islands. BRFSS is the largest continuously conducted health survey system in the world.
+
+## Sample
+
+The BRFSS is administered and supported by CDC’s Population Health. Obtaining samples of telephone numbers from CDC.
+
+The samples were collected by:
+
+- landline telephone survey: interviewers collect data from a randomly selected adult in a household.
+
+- cell-phones telephonic surveys: interviewers collect data from an adult who participates by using a cellular telephone and resides in a private residence or college housing.
+Disproportionate stratified sampling was used for land-line telephones. And the cellular phone sample is randomly generated from the combination od area code and prefix.
+
+
+## Inference
+
+If we look at the sample collection methods, we would conclude that this is an observational study. It uses stratified sampling method based on random digit dialing methods.
+
+## Generalizability
+
+The observational study is generalize to all adults non-institutionalized (18-years and older).
+
+## Causality
+
+As this is an observational study we can only be sure of  correlation/association, not a causation.
+
+* * *
+names(brfss2013.RData)
+
+## Part 2: Research questions
+
+**Research quesion 1:**
+How does the Type Of Physical Activity affect physhlth and menthlth.
+
+physhlth: Number Of Days Physical Health Not Good
+menthlth: Number Of Days Mental Health Not Good
+exract11: Type Of Physical Activity
+
+Is there a correlation between variable (exract11) (physhlth) and (menthlth).
+This would be a preliminary data exploration to examine the question How the type of Activity affect mental and physical 
+Health.
+
+**Research quesion 2:**
+How does the Tobacco Use affect the General Health
+
+smoke100: Smoked At Least 100 Cigarettes
+genhlth: General Health
+
+It would be interesting to know about how Smoked At Least 100 Cigarettes affect the general health of a person.
+
+**Research quesion 3:**
+How does Sugar Drinks affect Pre-Diabetes
+
+pdiabtst: Had A Test For High Blood Sugar In Past Three Years
+prediab1: Ever Been Told You Have Pre-Diabetes Or Borderline Diabetes
+ssbfrut2: How Often Did You Drink Sugar-Sweetened Drinks?
+
+We can examine the correlation between comsumption of sugar drinks
+and the probability of a person with pre-diabetes.
+
+* * *
+
+## Part 3: Exploratory data analysis
+
+NOTE: Insert code chunks as needed by clicking on the "Insert a new code chunk" 
+button (green button with orange arrow) above. Make sure that your code is visible
+in the project you submit. Delete this note when before you submit your work.
+
+**Research quesion 1:**
+
+```{r}
+
+```
+
+**Research quesion 2:**
+
+```{r}
+
+```
+
+
+**Research quesion 3:**
+
+```{r}
+
+```
+
